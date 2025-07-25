@@ -78,7 +78,7 @@ const mesas = Array.from({ length: 10 }, (_, i) => i + 1);
 
 const registrarUsuario = async () => {
   const query = await getDocs(collection(db, 'reservas'));
-  const existe = query.docs.some(doc => doc.data().catalogo === catalogo.value.trim());
+  const existe = query.docs.some(doc => doc.data().catalogo === (catalogo.value ?? '').trim());
 
   if (existe) {
     alert('Este número de catálogo ya está registrado.');
