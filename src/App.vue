@@ -74,7 +74,7 @@ const mesaSeleccionada = ref(null);
 const sillasSeleccionadas = ref([]);
 const sillasOcupadas = ref([]);
 const reservaConfirmada = ref(false);
-const mesas = Array.from({ length: 10 }, (_, i) => i + 1);
+const mesas = Array.from({ length: 8 }, (_, i) => i + 1);
 
 const registrarUsuario = async () => {
   const query = await getDocs(collection(db, 'reservas'));
